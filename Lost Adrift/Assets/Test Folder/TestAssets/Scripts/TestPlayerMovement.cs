@@ -6,10 +6,13 @@ public class TestPlayerMovement : MonoBehaviour
 {
     CharacterController controller;
     public int speed;
+    public int walkSpeed;
+    int currentSpeed;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        currentSpeed = speed;
     }
 
     // Update is called once per frame
@@ -20,6 +23,22 @@ public class TestPlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * currentSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Darkness")
+        {
+            currentSpeed = walkSpeed;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Darkness")
+        {
+            currentSpeed = speed;
+        }
     }
 }

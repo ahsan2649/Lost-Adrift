@@ -7,6 +7,7 @@ public class AbstractSpaceObject : MonoBehaviour
     public GameObject objectToHide;
     ItemScript scriptRef;
     public bool isSeen;
+    bool canChange = true;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class AbstractSpaceObject : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        if (scriptRef.equippedItem != 2)
+        if (scriptRef.equippedItem != 2 && canChange)
         {
             isSeen = !isSeen;
             if (isSeen)
@@ -46,5 +47,15 @@ public class AbstractSpaceObject : MonoBehaviour
     public void BecomeInvisible()
     {
         objectToHide.SetActive(false);
+    }
+
+    public void Freeze()
+    {
+        canChange = false;
+    }
+
+    public void UnFreeze()
+    {
+        canChange = true;
     }
 }

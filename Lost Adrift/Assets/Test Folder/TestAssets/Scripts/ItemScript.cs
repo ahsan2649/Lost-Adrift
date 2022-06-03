@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ItemScript : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class ItemScript : MonoBehaviour
 
     public List<Compass> chargedObjects;
     public List<DarknessComponent> darkAreas;
+    public List<CameraFlashComponent> flashableObjects;
 
     public bool isNorth;
     bool canSwitch = true;
+    public UnityEvent camFlash;
+    public int keys;
 
     void Start()
     {
@@ -26,6 +30,12 @@ public class ItemScript : MonoBehaviour
             chargedObjects.Add(script);
         }
 
+        foreach (Compass script in chargedObjects)
+        {
+            script.ChargeUpdated(isNorth);
+        }
+
+
         DarknessComponent[] d = FindObjectsOfType<DarknessComponent>();
 
         foreach(DarknessComponent script in d)
@@ -33,9 +43,12 @@ public class ItemScript : MonoBehaviour
             darkAreas.Add(script);
         }
 
-        foreach (Compass script in chargedObjects)
+
+        CameraFlashComponent[] c = FindObjectsOfType<CameraFlashComponent>();
+
+        foreach(CameraFlashComponent script in c)
         {
-            script.ChargeUpdated(isNorth);
+            flashableObjects.Add(script);
         }
     }
 
@@ -79,6 +92,16 @@ public class ItemScript : MonoBehaviour
             foreach (Compass script in chargedObjects)
             {
                 script.ChargeUpdated(isNorth);
+            }
+        }
+
+        //CameraCode
+        if(Input.GetKeyDown(KeyCode.Mouse1) && equippedItem == 4)
+        {
+            camFlash.Invoke();
+            foreach(CameraFlashComponent script in flashableObjects)
+            {
+                script.TestIfFlashed();
             }
         }
     }
