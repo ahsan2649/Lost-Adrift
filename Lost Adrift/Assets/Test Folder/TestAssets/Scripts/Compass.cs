@@ -16,11 +16,15 @@ public class Compass : MonoBehaviour
         if (newCharge == isNorth)
         {
             SameCharge.Invoke();
-            Debug.Log("SameCharge");
         }
         else
         {
             DifCharge.Invoke();
         }
+    }
+
+    private void OnEnable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<ItemScript>().addCompassToList(this);
     }
 }

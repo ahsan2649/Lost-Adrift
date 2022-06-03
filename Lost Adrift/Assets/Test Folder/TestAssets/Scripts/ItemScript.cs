@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
-    int equippedItem;
+    public int equippedItem;
     public GameObject[] items;
 
     public GameObject[] compassDirection;
 
-    Compass[] chargedObjects;
+    public List<Compass> chargedObjects;
 
     public bool isNorth;
 
@@ -17,7 +17,12 @@ public class ItemScript : MonoBehaviour
     {
         items[0].SetActive(true);
 
-        chargedObjects = FindObjectsOfType<Compass>();
+        Compass[] i = FindObjectsOfType<Compass>();
+
+        foreach(Compass script in i)
+        {
+            chargedObjects.Add(script);
+        }
 
         foreach (Compass script in chargedObjects)
         {
@@ -37,7 +42,6 @@ public class ItemScript : MonoBehaviour
                 equippedItem = 0;
             }
             items[equippedItem].SetActive(true);
-            Debug.Log(equippedItem);
         }
 
         //CompassCode
@@ -59,5 +63,11 @@ public class ItemScript : MonoBehaviour
                 script.ChargeUpdated(isNorth);
             }
         }
+    }
+
+    public void addCompassToList(Compass refToAdd)
+    {
+        chargedObjects.Add(refToAdd);
+        refToAdd.ChargeUpdated(isNorth);
     }
 }
