@@ -10,8 +10,10 @@ public class ItemScript : MonoBehaviour
     public GameObject[] compassDirection;
 
     public List<Compass> chargedObjects;
+    public List<DarknessComponent> darkAreas;
 
     public bool isNorth;
+    bool canSwitch = true;
 
     void Start()
     {
@@ -24,6 +26,13 @@ public class ItemScript : MonoBehaviour
             chargedObjects.Add(script);
         }
 
+        DarknessComponent[] d = FindObjectsOfType<DarknessComponent>();
+
+        foreach(DarknessComponent script in d)
+        {
+            darkAreas.Add(script);
+        }
+
         foreach (Compass script in chargedObjects)
         {
             script.ChargeUpdated(isNorth);
@@ -33,7 +42,7 @@ public class ItemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && canSwitch)
         {
             items[equippedItem].SetActive(false);
             equippedItem++;
@@ -42,6 +51,15 @@ public class ItemScript : MonoBehaviour
                 equippedItem = 0;
             }
             items[equippedItem].SetActive(true);
+
+            if(equippedItem == 1)
+            {
+                LampStatus(true);
+            }
+            else
+            {
+                LampStatus(false);
+            }
         }
 
         //CompassCode
@@ -69,5 +87,29 @@ public class ItemScript : MonoBehaviour
     {
         chargedObjects.Add(refToAdd);
         refToAdd.ChargeUpdated(isNorth);
+    }
+
+    public void LampStatus(bool isEquipped)
+    {
+        foreach(DarknessComponent script in darkAreas)
+        {
+            script.ChangeState(isEquipped);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Darkness")
+        {
+            canSwitch = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Darkness")
+        {
+            canSwitch = true;
+        }
     }
 }
