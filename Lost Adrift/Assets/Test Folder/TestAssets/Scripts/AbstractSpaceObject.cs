@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AbstractSpaceObject : MonoBehaviour
 {
+    public UnityEvent onAppear;
+    public UnityEvent onDisappear;
+
     public GameObject objectToHide;
     ItemScript scriptRef;
     public bool isSeen;
@@ -42,10 +46,12 @@ public class AbstractSpaceObject : MonoBehaviour
     public void BecomeVisible()
     {
         objectToHide.SetActive(true);
+        onAppear.Invoke();
     }
 
     public void BecomeInvisible()
     {
+        onDisappear.Invoke();
         objectToHide.SetActive(false);
     }
 
