@@ -15,6 +15,7 @@ public class AbstractSpaceObject : MonoBehaviour
 
     private void Start()
     {
+        //Initialization of variable and changes the visibilty of the abstrat object to the state selected in the editor.
         scriptRef = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemScript>();
 
         if (isSeen)
@@ -28,39 +29,37 @@ public class AbstractSpaceObject : MonoBehaviour
     }
 
 
-    private void OnBecameInvisible()
+    private void OnBecameInvisible() //When the object leaves the camera's view, this function runs (built in Unity function)
     {
-        if (scriptRef.equippedItem != 2 && canChange)
+        if (scriptRef.equippedItem != 2 && canChange) //Checking if the player has the map out or if it has been flashed by the camera
         {
-            isSeen = !isSeen;
+            isSeen = !isSeen; //Changes state of the object
             if (isSeen)
             {
-                BecomeVisible();
+                BecomeVisible(); //Makes the object visible
             }
             else
             {
-                BecomeInvisible();
+                BecomeInvisible(); //Makes object ivisible
             }
         }
     }
 
-    public void BecomeVisible()
+    public void BecomeVisible() //Enables the object, runs event and sets the isSeen bool to true.
     {
         objectToHide.SetActive(true);
         isSeen = true;
-        Debug.Log("Is Visible");
         onAppear.Invoke();
     }
 
-    public void BecomeInvisible()
+    public void BecomeInvisible() //Disables object, runs event and sets the isSeen bool to false
     {
         onDisappear.Invoke();
         isSeen = false;
-        Debug.Log("Is Hidden");
         objectToHide.SetActive(false);
     }
 
-    public void Freeze()
+    public void Freeze() // This function and UnFreeze function deal with the camera functionality. 
     {
         canChange = false;
     }
