@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
 
 public class Lock : MonoBehaviour
 {
@@ -23,5 +23,10 @@ public class Lock : MonoBehaviour
     public void TestEvent(string msg)
     {
         Debug.Log(msg);
+    }
+
+    public void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }
 }

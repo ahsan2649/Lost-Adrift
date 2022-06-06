@@ -27,6 +27,7 @@ public class AbstractSpaceObject : MonoBehaviour
         }
     }
 
+
     private void OnBecameInvisible()
     {
         if (scriptRef.equippedItem != 2 && canChange)
@@ -46,12 +47,16 @@ public class AbstractSpaceObject : MonoBehaviour
     public void BecomeVisible()
     {
         objectToHide.SetActive(true);
+        isSeen = true;
+        Debug.Log("Is Visible");
         onAppear.Invoke();
     }
 
     public void BecomeInvisible()
     {
         onDisappear.Invoke();
+        isSeen = false;
+        Debug.Log("Is Hidden");
         objectToHide.SetActive(false);
     }
 
