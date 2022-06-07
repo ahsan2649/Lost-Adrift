@@ -65,7 +65,7 @@ public class ItemScript : MonoBehaviour
             }
             items[equippedItem].SetActive(true);
 
-            if(equippedItem == 1)
+            if(items[equippedItem].name == "Lamp")
             {
                 LampStatus(true);
             }

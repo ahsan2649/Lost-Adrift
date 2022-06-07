@@ -45,6 +45,22 @@ public class NormalDoor : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player" && !isFrozen && switches.Length == 0)
+        {
+            isOpen.Invoke();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player" && !isFrozen && switches.Length == 0)
+        {
+            isClosed.Invoke();
+        }
+    }
+
     public void Freeze()
     {
         isFrozen = true;
