@@ -10,6 +10,8 @@ public class NormalDoor : MonoBehaviour
     public UnityEvent isOpen;
     public UnityEvent isClosed;
 
+    bool isFrozen;
+
     void Start()
     {
         foreach(Switch script in switches)
@@ -20,23 +22,37 @@ public class NormalDoor : MonoBehaviour
 
     public void CheckForNewState()
     {
-        bool allSwitchesActive = true;
-
-        foreach(Switch script in switches)
+        if (!isFrozen)
         {
-            if (script.isActive == false || script.isInScene == false)
+            bool allSwitchesActive = true;
+
+            foreach (Switch script in switches)
             {
-                allSwitchesActive = false;
+                if (script.isActive == false || script.isInScene == false)
+                {
+                    allSwitchesActive = false;
+                }
+            }
+
+            if (allSwitchesActive)
+            {
+                isOpen.Invoke();
+            }
+            else
+            {
+                isClosed.Invoke();
             }
         }
+    }
 
-        if (allSwitchesActive)
-        {
-            isOpen.Invoke();
-        }
-        else
-        {
-            isClosed.Invoke();
-        }
+    public void Freeze()
+    {
+        isFrozen = true;
+    }
+
+    public void UnFreeze()
+    {
+        isFrozen = false;
+        CheckForNewState();
     }
 }
