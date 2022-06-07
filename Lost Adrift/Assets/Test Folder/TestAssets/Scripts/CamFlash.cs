@@ -15,7 +15,7 @@ public class CamFlash : MonoBehaviour
     {
         if (camFlash.intensity > 0)
         {
-            camFlash.intensity -= 200 * Time.deltaTime;
+            camFlash.intensity -= 150 * Time.deltaTime;
         }
     }
 

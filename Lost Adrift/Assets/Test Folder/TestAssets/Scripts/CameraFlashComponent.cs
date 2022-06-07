@@ -40,7 +40,6 @@ public class CameraFlashComponent : MonoBehaviour
         {
             time = 5;
             Freeze.Invoke();
-            Debug.Log("sdsdsd");
         }
     }
 }

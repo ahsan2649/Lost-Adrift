@@ -5,25 +5,45 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public bool isActive;
-    bool overlapping;
     public bool isInScene = true;
+    public bool isTimed;
+    public float duration;
+    float timer;
+    bool overlapping;
+    bool isFrozen;
 
     public NormalDoor dooRef;
     public GameObject buttonPart;
 
     private void Update()
     {
-        if (overlapping && Input.GetKeyDown(KeyCode.E))
+        if (!isFrozen)
         {
-            isActive = !isActive;
-            if (isActive)
+            if (overlapping && Input.GetKeyDown(KeyCode.E))
             {
-                buttonPart.transform.localPosition = new Vector3(0, 0, -0.065f);
-                dooRef.CheckForNewState();
+                isActive = !isActive;
+                if (isActive)
+                {
+                    buttonPart.transform.localPosition = new Vector3(0, 0, -0.065f);
+                    dooRef.CheckForNewState();
+                    timer = duration;
+                }
+                else
+                {
+                    buttonPart.transform.localPosition = new Vector3(0, 0, -0.137f);
+                    timer = 0;
+                    dooRef.CheckForNewState();
+                }
             }
-            else
+            if (isTimed && timer > 0 && isActive)
+            {
+                timer -= Time.deltaTime;
+            }
+            if (timer < 0)
             {
                 buttonPart.transform.localPosition = new Vector3(0, 0, -0.137f);
+                timer = 0;
+                isActive = false;
                 dooRef.CheckForNewState();
             }
         }
@@ -56,5 +76,15 @@ public class Switch : MonoBehaviour
         isInScene = false;
         dooRef.CheckForNewState();
         overlapping = false;
+    }
+
+    public void Freeze()
+    {
+        isFrozen = true;
+    }
+
+    public void UnFreeze()
+    {
+        isFrozen = false;
     }
 }

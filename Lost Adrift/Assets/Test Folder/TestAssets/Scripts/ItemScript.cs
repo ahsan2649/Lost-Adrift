@@ -76,7 +76,7 @@ public class ItemScript : MonoBehaviour
         }
 
         //CompassCode
-        if (Input.GetKeyDown(KeyCode.Mouse1) && equippedItem == 0)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Compass")
         {
             isNorth = !isNorth;
             if (isNorth)
@@ -96,7 +96,7 @@ public class ItemScript : MonoBehaviour
         }
 
         //CameraCode
-        if(Input.GetKeyDown(KeyCode.Mouse1) && equippedItem == 4)
+        if(Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Camera")
         {
             camFlash.Invoke();
             foreach(CameraFlashComponent script in flashableObjects)
