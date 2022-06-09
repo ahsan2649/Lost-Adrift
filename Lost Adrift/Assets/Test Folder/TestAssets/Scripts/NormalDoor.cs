@@ -36,26 +36,25 @@ public class NormalDoor : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && overLapping && switches.Length == 0)
+        if (Input.GetKeyDown(KeyCode.E) && overLapping)
         {
-            if (locked == false && !isOpened)
+            if (locked == false && !isOpened && switches.Length == 0)
             {
                 isOpen.Invoke();
                 isOpened = true;
             }
 
-            if (locked && playerRef.keys > 0)
+            if (locked && playerRef.keys > 0 && switches.Length == 0)
             {
                 playerRef.keys--;
                 locked = false;
                 isUnLocked.Invoke();
             }
 
-            if(locked && playerRef.keys == 0)
+            if(locked && playerRef.keys == 0 && switches.Length == 0)
             {
                 isLocked.Invoke();
             }
-            
         }
     }
 
