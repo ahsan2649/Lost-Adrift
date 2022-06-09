@@ -50,7 +50,6 @@ public class AbstractSpaceObject : MonoBehaviour
     {
         if (!isNormal)
         {
-            Debug.Log(isSeen);
             objectToHide.SetActive(true);
             isSeen = true;
             onAppear.Invoke();
@@ -61,7 +60,6 @@ public class AbstractSpaceObject : MonoBehaviour
     {
         if (!isNormal)
         {
-            Debug.Log(isSeen);
             onDisappear.Invoke();
             isSeen = false;
             objectToHide.SetActive(false);

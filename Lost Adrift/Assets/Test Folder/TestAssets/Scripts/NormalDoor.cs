@@ -114,6 +114,9 @@ public class NormalDoor : MonoBehaviour
     public void UnFreeze()
     {
         isFrozen = false;
-        CheckForNewState();
+        if(switches.Length > 0)
+        {
+            CheckForNewState();
+        }
     }
 }
