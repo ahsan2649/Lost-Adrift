@@ -5,10 +5,12 @@ using UnityEngine;
 public class CamFlash : MonoBehaviour
 {
     Light camFlash;
+    AudioSource camSound;
 
     private void Start()
     {
         camFlash = GetComponent<Light>();
+        camSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -22,5 +24,6 @@ public class CamFlash : MonoBehaviour
     public void Flash()
     {
         camFlash.intensity = 100;
+        camSound.Play();
     }
 }
