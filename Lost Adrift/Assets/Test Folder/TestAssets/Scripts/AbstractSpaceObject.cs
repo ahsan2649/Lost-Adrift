@@ -11,6 +11,7 @@ public class AbstractSpaceObject : MonoBehaviour
     public GameObject objectToHide;
     ItemScript scriptRef;
     public bool isSeen;
+    public bool isNormal = false;
     bool canChange = true;
 
     private void Start()
@@ -31,7 +32,7 @@ public class AbstractSpaceObject : MonoBehaviour
 
     private void OnBecameInvisible() //When the object leaves the camera's view, this function runs (built in Unity function)
     {
-        if (scriptRef.equippedItem != 2 && canChange) //Checking if the player has the map out or if it has been flashed by the camera
+        if (scriptRef.equippedItem != 2 && canChange && !isNormal) //Checking if the player has the map out or if it has been flashed by the camera and is not normal
         {
             isSeen = !isSeen; //Changes state of the object
             if (isSeen)
@@ -47,16 +48,24 @@ public class AbstractSpaceObject : MonoBehaviour
 
     public void BecomeVisible() //Enables the object, runs event and sets the isSeen bool to true.
     {
-        objectToHide.SetActive(true);
-        isSeen = true;
-        onAppear.Invoke();
+        if (!isNormal)
+        {
+            Debug.Log(isSeen);
+            objectToHide.SetActive(true);
+            isSeen = true;
+            onAppear.Invoke();
+        }
     }
 
     public void BecomeInvisible() //Disables object, runs event and sets the isSeen bool to false
     {
-        onDisappear.Invoke();
-        isSeen = false;
-        objectToHide.SetActive(false);
+        if (!isNormal)
+        {
+            Debug.Log(isSeen);
+            onDisappear.Invoke();
+            isSeen = false;
+            objectToHide.SetActive(false);
+        }
     }
 
     public void Freeze() // This function and UnFreeze function deal with the camera functionality. 
@@ -67,5 +76,15 @@ public class AbstractSpaceObject : MonoBehaviour
     public void UnFreeze()
     {
         canChange = true;
+    }
+
+    public void MakeAbstract()
+    {
+        isNormal = false;
+    }
+
+    public void MakeNormal()
+    {
+        isNormal = true;
     }
 }
