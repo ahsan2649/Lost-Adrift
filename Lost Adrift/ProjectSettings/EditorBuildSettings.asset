@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Test Folder/TestAssets/Level_2.unity
     guid: fc5beaae4f42e284caf5d6207808aaf8
+  - enabled: 1
+    path: Assets/Cabin.unity
+    guid: 9f0950917cfc2584a92536df90dbc6a2
   m_configObjects: {}

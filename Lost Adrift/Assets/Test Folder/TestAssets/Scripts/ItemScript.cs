@@ -18,6 +18,7 @@ public class ItemScript : MonoBehaviour
     bool canSwitch = true;
     public UnityEvent camFlash;
     public int keys;
+    public int ritualObjects;
 
     void Start()
     {

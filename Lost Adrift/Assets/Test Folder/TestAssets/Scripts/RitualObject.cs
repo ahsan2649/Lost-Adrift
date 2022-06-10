@@ -10,20 +10,33 @@ public class RitualObject : MonoBehaviour
     public bool isActivated;
     bool overlapping;
     public RitualDoor doorRef;
+    ItemScript reference;
+
+    private void Start()
+    {
+        reference = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemScript>();
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && overlapping)
         {
-            isActivated = !isActivated;
-
-            if (isActivated)
+            Debug.Log(reference.ritualObjects);
+            if (!isActivated && reference.ritualObjects > 0)
             {
+                reference.ritualObjects--;
+                isActivated = true;
                 onActivate.Invoke();
                 ritualOn();
             }
-            else
+            else if(!isActivated && reference.ritualObjects == 0)
             {
+                onDeactivate.Invoke();
+                ritualOff();
+            }
+            else if(isActivated)
+            {
+                reference.ritualObjects++;
                 onDeactivate.Invoke();
                 ritualOff();
             }
