@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Key : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public UnityEvent getKey;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
             other.gameObject.GetComponent<ItemScript>().keys++;
+            getKey.Invoke();
             Destroy(gameObject);
         }
     }
