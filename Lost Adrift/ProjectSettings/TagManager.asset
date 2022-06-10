@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Darkness
   - Door
+  - Music
   layers:
   - Default
   - TransparentFX

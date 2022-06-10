@@ -7,6 +7,7 @@ public class CandleTransition : MonoBehaviour
 {
     bool overlapping;
     bool inOtherworld;
+    MusicScript musicRef;
 
     public GameObject normalWorld;
     public GameObject otherWorld;
@@ -17,7 +18,7 @@ public class CandleTransition : MonoBehaviour
 
     void Start()
     {
-        
+        musicRef = GameObject.FindGameObjectWithTag("Music").GetComponent<MusicScript>();
     }
 
     // Update is called once per frame
@@ -32,12 +33,14 @@ public class CandleTransition : MonoBehaviour
             }
             if (inOtherworld)
             {
+                musicRef.PlayMusic();
                 normalWorld.SetActive(true);
                 otherWorld.SetActive(false);
                 candleHead.SetActive(true);
             }
             else
             {
+                musicRef.PauseMusic();
                 normalWorld.SetActive(false);
                 otherWorld.SetActive(true);
                 candleHead.SetActive(false);
