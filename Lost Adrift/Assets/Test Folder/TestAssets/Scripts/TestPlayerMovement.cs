@@ -50,7 +50,7 @@ public class TestPlayerMovement : MonoBehaviour
         {
             timer = StepSounds[r].length * 1.5f;
         }
-        Source.PlayOneShot(StepSounds[r]);
+        Source.PlayOneShot(StepSounds[r]); 
     }
 
     private void OnTriggerEnter(Collider other)
