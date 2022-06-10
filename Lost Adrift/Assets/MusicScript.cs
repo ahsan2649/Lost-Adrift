@@ -48,4 +48,9 @@ public class MusicScript : MonoBehaviour
         source.UnPause();
         paused = false;
     }
+
+    public void ChangeVolume(float newVolume)
+    {
+        source.volume = newVolume;
+    }
 }

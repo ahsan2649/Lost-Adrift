@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class DarknessComponent : MonoBehaviour
 {
     Collider col;
+    MusicScript music;
 
     public UnityEvent enterZone;
     public UnityEvent exitZone;
@@ -13,6 +14,7 @@ public class DarknessComponent : MonoBehaviour
     void Start()
     {
         col = GetComponent<Collider>();
+        music = GameObject.FindGameObjectWithTag("Music").GetComponent<MusicScript>();
     }
 
 
@@ -32,6 +34,7 @@ public class DarknessComponent : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            music.ChangeVolume(0.1f);
             enterZone.Invoke();
         }
     }
@@ -40,6 +43,7 @@ public class DarknessComponent : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            music.ChangeVolume(0.25f);
             exitZone.Invoke();
         }
     }
