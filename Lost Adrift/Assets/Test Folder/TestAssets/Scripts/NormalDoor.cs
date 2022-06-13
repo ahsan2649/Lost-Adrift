@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class NormalDoor : MonoBehaviour
 {
-    public bool needsKey;
+    public int keysNeeded;
     public Switch[] switches;
     ItemScript playerRef;
 
@@ -26,7 +26,7 @@ public class NormalDoor : MonoBehaviour
             script.dooRef = this;
         }
 
-        if (needsKey)
+        if (keysNeeded > 0)
         {
             locked = true;
         }
@@ -44,14 +44,13 @@ public class NormalDoor : MonoBehaviour
                 isOpened = true;
             }
 
-            if (locked && playerRef.keys > 0 && switches.Length == 0)
+            if (locked && playerRef.keys >= keysNeeded && switches.Length == 0)
             {
-                playerRef.keys--;
                 locked = false;
                 isUnLocked.Invoke();
             }
 
-            if(locked && playerRef.keys == 0 && switches.Length == 0)
+            if(locked && playerRef.keys < keysNeeded && switches.Length == 0)
             {
                 isLocked.Invoke();
             }

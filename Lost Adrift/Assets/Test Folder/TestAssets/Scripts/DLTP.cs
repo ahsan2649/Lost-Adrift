@@ -7,24 +7,27 @@ public class DLTP : MonoBehaviour
     public bool isInLOS;
     public GameObject player;
     public RaycastHit hit;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AbstractSpaceObject abstractObject;
 
     // Update is called once per frame
     void Update()
     {
-        if(Physics.Raycast(this.transform.position, player.transform.position - this.transform.position, out hit) && hit.transform.tag == "Player")
+        if(Physics.Raycast(this.transform.position, player.transform.position - this.transform.position, out hit, Mathf.Infinity, 7) && hit.transform.tag == "Player")
         {
             isInLOS = true;
+            abstractObject.inSight();
             Debug.DrawLine(this.transform.position, player.transform.position, Color.green);
         }
         else
         {
+            if (isInLOS)
+            {
+                abstractObject.outOfSight();
+            }
             isInLOS = false;
             Debug.DrawLine(this.transform.position, player.transform.position, Color.red);
         }
     }
+
+
 }
