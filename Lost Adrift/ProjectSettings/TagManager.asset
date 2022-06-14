@@ -7,6 +7,7 @@ TagManager:
   - Darkness
   - Door
   - Music
+  - Candle
   layers:
   - Default
   - TransparentFX

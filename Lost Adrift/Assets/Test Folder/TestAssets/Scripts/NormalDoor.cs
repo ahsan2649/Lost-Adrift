@@ -86,7 +86,7 @@ public class NormalDoor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && !isFrozen && switches.Length == 0)
+        if (other.tag == "Player" && switches.Length == 0)
         {
             overLapping = true;
         }
@@ -94,7 +94,7 @@ public class NormalDoor : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player" && !isFrozen && switches.Length == 0)
+        if (other.tag == "Player" && switches.Length == 0)
         {
             overLapping = false;
             if (isOpened)

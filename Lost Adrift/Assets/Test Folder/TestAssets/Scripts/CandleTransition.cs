@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class CandleTransition : MonoBehaviour
 {
     bool overlapping;
-    bool inOtherworld;
+    public bool inOtherworld;
     MusicScript musicRef;
 
     public GameObject normalWorld;
@@ -15,10 +15,20 @@ public class CandleTransition : MonoBehaviour
 
     public UnityEvent onActive;
     public UnityEvent goToOtherWorld;
+    public CandleTransition[] CandleReferences;
 
     void Start()
     {
         musicRef = GameObject.FindGameObjectWithTag("Music").GetComponent<MusicScript>();
+
+        GameObject[] candleRefs = GameObject.FindGameObjectsWithTag("Candle");
+        CandleReferences = new CandleTransition[candleRefs.Length];
+        int i = 0;
+        foreach(GameObject gObject in candleRefs)
+        {
+            CandleReferences[i] = gObject.GetComponent<CandleTransition>();
+            i++;
+        }
     }
 
     // Update is called once per frame
@@ -33,6 +43,13 @@ public class CandleTransition : MonoBehaviour
             }
             if (inOtherworld)
             {
+                foreach (CandleTransition script in CandleReferences)
+                {
+                    if (script != this)
+                    {
+                        script.HideOtherWorld();
+                    }
+                }
                 musicRef.PlayMusic();
                 normalWorld.SetActive(true);
                 otherWorld.SetActive(false);
@@ -44,6 +61,13 @@ public class CandleTransition : MonoBehaviour
                 normalWorld.SetActive(false);
                 otherWorld.SetActive(true);
                 candleHead.SetActive(false);
+                foreach (CandleTransition script in CandleReferences)
+                {
+                    if (script != this)
+                    {
+                        script.inOtherworld = true;
+                    }
+                }
             }
 
             inOtherworld = !inOtherworld;
@@ -65,5 +89,11 @@ public class CandleTransition : MonoBehaviour
         {
             overlapping = false;
         }
+    }
+
+    public void HideOtherWorld()
+    {
+        otherWorld.SetActive(false);
+        inOtherworld = false;
     }
 }

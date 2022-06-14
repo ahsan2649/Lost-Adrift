@@ -19,6 +19,7 @@ public class ItemScript : MonoBehaviour
     public UnityEvent camFlash;
     public int keys;
     public int ritualObjects;
+    float timer;
 
     void Start()
     {
@@ -56,6 +57,8 @@ public class ItemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
+
         if (Input.GetKeyDown(KeyCode.Mouse0) && canSwitch)
         {
             items[equippedItem].SetActive(false);
@@ -97,8 +100,9 @@ public class ItemScript : MonoBehaviour
         }
 
         //CameraCode
-        if(Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Camera")
+        if(Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Camera" && timer < 0)
         {
+            timer = 5;
             camFlash.Invoke();
             foreach(CameraFlashComponent script in flashableObjects)
             {
