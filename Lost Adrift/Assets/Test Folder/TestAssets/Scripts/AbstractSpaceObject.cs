@@ -21,7 +21,7 @@ public class AbstractSpaceObject : MonoBehaviour
         //Initialization of variable and changes the visibilty of the abstrat object to the state selected in the editor.
         scriptRef = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemScript>();
         lineOfSight = GetComponent<DLTP>();
-        lineOfSight.abstractObject = this;
+        lineOfSight.abstractObject = this; //Get dltp script reference
 
         if (isSeen)
         {

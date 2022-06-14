@@ -9,7 +9,7 @@ public class CameraFlashComponent : MonoBehaviour
     public UnityEvent unFreeze;
 
     float time;
-    bool canBeFrozen = true;
+    public bool canBeFrozen = true;
 
     void Update()
     {
@@ -38,6 +38,7 @@ public class CameraFlashComponent : MonoBehaviour
     {
         if (canBeFrozen)
         {
+            Debug.Log("Frozen " + name);
             time = 5;
             Freeze.Invoke();
         }
