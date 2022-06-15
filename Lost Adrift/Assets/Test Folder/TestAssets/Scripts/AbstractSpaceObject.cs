@@ -72,7 +72,10 @@ public class AbstractSpaceObject : MonoBehaviour
 
     public void Freeze() // This function and UnFreeze function deal with the camera functionality. 
     {
-        canChange = false;
+        if (isSeen)
+        {
+            canChange = false;
+        }
     }
 
     public void UnFreeze()

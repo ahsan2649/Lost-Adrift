@@ -62,7 +62,6 @@ public class NormalDoor : MonoBehaviour
         if (!isFrozen)
         {
             bool allSwitchesActive = true;
-
             foreach (Switch script in switches)
             {
                 if (script.isActive == false || script.isInScene == false)
