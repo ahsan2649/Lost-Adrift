@@ -117,4 +117,9 @@ public class NormalDoor : MonoBehaviour
             CheckForNewState();
         }
     }
+
+    public void unLock()
+    {
+        locked = false;
+    }
 }

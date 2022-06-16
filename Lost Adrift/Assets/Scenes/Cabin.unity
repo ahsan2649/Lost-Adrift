@@ -3396,7 +3396,7 @@ PrefabInstance:
     - target: {fileID: 8945603845125906113, guid: 382649b0f6abe9740bca9de5dbe3f1b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8945603845125906113, guid: 382649b0f6abe9740bca9de5dbe3f1b0,
         type: 3}
@@ -5523,10 +5523,60 @@ MonoBehaviour:
         m_CallState: 2
   isLocked:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 209849836}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 4eb0540d9d598054ba96969d65074783,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isUnLocked:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 209849836}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 2be9c903aa27c7f48b6876ca2d5a0bd8,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1302108238}
+        m_TargetAssemblyTypeName: NormalDoor, Assembly-CSharp
+        m_MethodName: unLock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1978922398}
+        m_TargetAssemblyTypeName: NormalDoor, Assembly-CSharp
+        m_MethodName: unLock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isClosed:
     m_PersistentCalls:
       m_Calls:
@@ -9699,10 +9749,16 @@ PrefabInstance:
       propertyPath: blendDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 213273975228800814, guid: ef83d555251d21247964fe17669daba3,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: f1f64fc400c1ed940a71b9398e814973,
+        type: 2}
     - target: {fileID: 1499184053821863699, guid: ef83d555251d21247964fe17669daba3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1499184053821863699, guid: ef83d555251d21247964fe17669daba3,
         type: 3}
@@ -11220,13 +11276,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399770465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.182141, y: -4.5984735, z: 20.61026}
+  m_LocalPosition: {x: -15.790685, y: -0.4175949, z: 25.246637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1748248279}
-  m_Father: {fileID: 1607078893}
-  m_RootOrder: 11
+  m_Father: {fileID: 1891279505}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &399770470
 BoxCollider:
@@ -38618,7 +38674,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 71b8e8339cdf98e46a0fe79d62d0b05b, type: 3}
   - {fileID: 8300000, guid: f2974950b9eba2b42bdd78c8d42e45fb, type: 3}
   speed: 3
-  walkSpeed: 2
+  walkSpeed: 3
 --- !u!114 &1254484968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40109,24 +40165,62 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1302108238}
+  isLocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1302108239}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: PlayOneShot
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 8300000, guid: 4eb0540d9d598054ba96969d65074783,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnLocked:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1302108239}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 2be9c903aa27c7f48b6876ca2d5a0bd8,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 209849835}
+        m_TargetAssemblyTypeName: NormalDoor, Assembly-CSharp
+        m_MethodName: unLock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1978922398}
+        m_TargetAssemblyTypeName: NormalDoor, Assembly-CSharp
+        m_MethodName: unLock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isClosed:
     m_PersistentCalls:
       m_Calls:
@@ -47392,8 +47486,6 @@ Transform:
   - {fileID: 1942410343}
   - {fileID: 1690563479}
   - {fileID: 229469736}
-  - {fileID: 1922532377}
-  - {fileID: 399770469}
   m_Father: {fileID: 1644287468}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55564,8 +55656,10 @@ Transform:
   - {fileID: 839029453}
   - {fileID: 322263805}
   - {fileID: 1656148805}
-  - {fileID: 1978922397}
   - {fileID: 2140424826}
+  - {fileID: 1978922397}
+  - {fileID: 1922532377}
+  - {fileID: 399770469}
   m_Father: {fileID: 1669401230}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -56473,13 +56567,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922532373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.633141, y: -4.5984735, z: 20.61026}
+  m_LocalPosition: {x: -20.339685, y: -0.4175949, z: 25.246637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1213546536}
-  m_Father: {fileID: 1607078893}
-  m_RootOrder: 10
+  m_Father: {fileID: 1891279505}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1922532378
 BoxCollider:
@@ -59042,24 +59136,62 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1978922398}
+  isLocked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1978922399}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: PlayOneShot
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 8300000, guid: 4eb0540d9d598054ba96969d65074783,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isLocked:
-    m_PersistentCalls:
-      m_Calls: []
   isUnLocked:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1978922399}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 2be9c903aa27c7f48b6876ca2d5a0bd8,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1302108238}
+        m_TargetAssemblyTypeName: NormalDoor, Assembly-CSharp
+        m_MethodName: unLock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 209849835}
+        m_TargetAssemblyTypeName: NormalDoor, Assembly-CSharp
+        m_MethodName: unLock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isClosed:
     m_PersistentCalls:
       m_Calls:
