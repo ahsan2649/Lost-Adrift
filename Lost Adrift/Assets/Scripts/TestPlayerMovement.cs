@@ -70,4 +70,10 @@ public class TestPlayerMovement : MonoBehaviour
             currentSpeed = speed;
         }
     }
+
+    public void leftDarkness() //Called when darkness is disabled rather than left organically
+    {
+        inDarkness = false;
+        currentSpeed = speed;
+    }
 }
