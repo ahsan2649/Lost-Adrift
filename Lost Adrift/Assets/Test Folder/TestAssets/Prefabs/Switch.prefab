@@ -214,6 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  isInScene: 1
+  isTimed: 0
+  duration: 0
   dooRef: {fileID: 0}
   buttonPart: {fileID: 7064291925736388339}
 --- !u!65 &8430818914176601350
@@ -227,5 +230,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 0.99436945}
+  m_Center: {x: -4.0011295e-17, y: 0, z: -0.5028154}

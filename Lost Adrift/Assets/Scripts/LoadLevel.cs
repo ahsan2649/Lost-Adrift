@@ -5,13 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    public string levelName;
 
-    private void OnTriggerEnter(Collider other)
+    public void LoadLevelFunction(string levelName)
     {
-        if(other.tag == "Player")
-        {
-            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
-        }
+
+        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }
 }
