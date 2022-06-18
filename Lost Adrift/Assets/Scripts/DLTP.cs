@@ -5,9 +5,15 @@ using UnityEngine;
 public class DLTP : MonoBehaviour
 {
     public bool isInLOS;
-    public GameObject player;
+    GameObject player;
     public RaycastHit hit;
     public AbstractSpaceObject abstractObject;
+
+    private void Start()
+    {
+        abstractObject = GetComponent<AbstractSpaceObject>();
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update()
