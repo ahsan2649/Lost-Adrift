@@ -272,9 +272,7 @@ MonoBehaviour:
 
 
     Doors
-    will either be unloc
-
-    ked, require a key or need to be opened by a button.
+    will either be unlocked, require a key or need to be opened by a button.
 
 '
   m_isRightToLeft: 0
@@ -4263,6 +4261,122 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ba6dcc6ae2fe84691f0ac6d16c7191, type: 3}
+--- !u!1001 &555909896
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.899
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.351
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.1050935
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8535535
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.35355338
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.35355338
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.1464466
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+        type: 3}
+      propertyPath: m_Name
+      value: candle (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a59154f419f1214fb7b1fb8f0af268a, type: 3}
+--- !u!1 &555909897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2793727289926329592, guid: 5a59154f419f1214fb7b1fb8f0af268a,
+    type: 3}
+  m_PrefabInstance: {fileID: 555909896}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &555909898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555909897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4dc1a251c5b824e89837c5e58a0349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getKey:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 555909897}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isKey: 0
+--- !u!65 &555909899
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555909897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &561408653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5889165861254569686, guid: 30ba6dcc6ae2fe84691f0ac6d16c7191,
@@ -16158,7 +16272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInLOS: 0
-  player: {fileID: 1254484964}
   abstractObject: {fileID: 1561247710}
 --- !u!114 &1561247710
 MonoBehaviour:
@@ -19985,6 +20098,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1982635549}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isKey: 1
 --- !u!65 &1982635548
 BoxCollider:
@@ -20845,7 +20970,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getKey:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099148697}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isKey: 0
 --- !u!65 &2099148702
 BoxCollider:
@@ -21326,7 +21463,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.502018
+      value: 12.51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a59154f419f1214fb7b1fb8f0af268a,
         type: 3}

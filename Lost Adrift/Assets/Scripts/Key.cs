@@ -46,7 +46,6 @@ public class Key : MonoBehaviour
 
     void dissapear()
     {
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
         overlapping = false;
     }
