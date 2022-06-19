@@ -1,0 +1,45 @@
+# Blender MTL File: 'Lantern.blend'
+# Material Count: 4
+
+newmtl Glass
+Ns 150.619855
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.445455 0.445455 0.445455
+Ke 0.000000 0.000000 0.000000
+Ni 1.050000
+d 1.000000
+illum 2
+map_Bump -bm 0.900000 -s 4.800000 4.800000 4.800000 C:\\Users\\chada\\OneDrive\\Desktop\\Textures\\Image Textures\\moss.jpg
+
+newmtl Lantern_Body_
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.060719 0.060719 0.060719
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 1.500000 -s 4.500000 4.500000 4.500000 C:\\Users\\chada\\OneDrive\\Desktop\\Textures\\Normal Maps\\rust.jpg
+
+newmtl Lantern_Handle
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.060719 0.060719 0.060719
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 1.500000 -s 9.299999 9.299999 9.299999 C:\\Users\\chada\\OneDrive\\Desktop\\Textures\\Normal Maps\\rust.jpg
+
+newmtl Light
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.129154 0.001948
+Ks 0.500000 0.500000 0.500000
+Ke 97.281556 3.934476 0.329285
+Ni 1.450000
+d 1.000000
+illum 2

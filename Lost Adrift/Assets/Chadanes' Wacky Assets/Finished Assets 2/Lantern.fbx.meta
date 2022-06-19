@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1eafb303c86f55e45b667296ada01ac6
+guid: 6972a052b7652af44ac4a284a4c1662c
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -12,12 +12,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Lantern_Body_
+      name: Lantern Body_
     second: {fileID: 2100000, guid: a203165c27b3d5a47a1884efbf8b694b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Lantern_Handle
+      name: Lantern Handle
     second: {fileID: 2100000, guid: 23d5e842b547047429d4b253134e9edc, type: 2}
   - first:
       type: UnityEngine:Material
