@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 57bd2a10a3274304c93a5c547975473f
+guid: 127a801a1c1dcd24ea685acf7c2ac5b9
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Label
+    second: {fileID: 2100000, guid: 955a2d1a5d1761b4db3e3a02c7b7f1ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rusty painted metal
+    second: {fileID: 2100000, guid: 8f4c65355d6d2354e9d98a33f99335e8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

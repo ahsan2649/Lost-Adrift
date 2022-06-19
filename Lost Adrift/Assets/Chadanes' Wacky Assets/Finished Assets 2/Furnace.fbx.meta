@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: 79638e0d95ea8564cb8391ab64ca3522
+guid: 29f8aec90a30e5a489a9c6d983a32d43
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door Material
+    second: {fileID: 2100000, guid: 57b25a4aca9b0e8489017a5e1fa830a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Furnace Body
+    second: {fileID: 2100000, guid: 0c06de8b7e82e774191f5865e55959d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: e5ac4e7f7c2e3ea438647fd17d3fbe6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle
+    second: {fileID: 2100000, guid: b34b17852b54da1498fb0a37c71e0e4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pipe
+    second: {fileID: 2100000, guid: 7dc0fbcb8515c904bad995eeb0c7034f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 3c4e24374372b194dab4e8258e175219, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

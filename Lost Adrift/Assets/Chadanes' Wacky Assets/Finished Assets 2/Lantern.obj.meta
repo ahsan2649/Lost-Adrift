@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: 4bfe8d66f4504ad45859b08cbc3b521c
+guid: 1eafb303c86f55e45b667296ada01ac6
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 10dbb38b11ab8f248af0f547cc88f90a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lantern_Body_
+    second: {fileID: 2100000, guid: a203165c27b3d5a47a1884efbf8b694b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lantern_Handle
+    second: {fileID: 2100000, guid: 23d5e842b547047429d4b253134e9edc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light
+    second: {fileID: 2100000, guid: 94f71eb13c5606746aba7a4d018a4433, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

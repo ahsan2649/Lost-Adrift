@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 9f82b02a8fb6f2c419baf87ac0a4eded
+guid: 57bd2a10a3274304c93a5c547975473f
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pencil Holder
+    second: {fileID: 2100000, guid: d23ef51dfdcd70a45bdefa17f0b76d6a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
