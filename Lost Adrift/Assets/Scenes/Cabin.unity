@@ -40805,6 +40805,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f2974950b9eba2b42bdd78c8d42e45fb, type: 3}
   speed: 3
   walkSpeed: 2
+  lanternBob: {fileID: 1273151526}
 --- !u!114 &1254484968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41780,6 +41781,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1160669366}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1273151526
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273151524}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdd0fcfd5cf9a954095a0029e9586d7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1275071484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 774395244825972999, guid: 88f5cbf6efd03c148b6e4649a389c167,

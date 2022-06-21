@@ -14,6 +14,9 @@ public class TestPlayerMovement : MonoBehaviour
     int currentSpeed;
     bool inDarkness;
 
+    public Animator lanternBob;
+    bool isPlaying;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -28,6 +31,19 @@ public class TestPlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
+
+        if (move != new Vector3(0, move.y, 0) && isPlaying == false)
+        {
+            Debug.Log("PPP");
+            lanternBob.StopPlayback();
+            isPlaying = true;
+        }
+        else if(move == new Vector3(0, move.y, 0))
+        {
+            Debug.Log("sss");
+            lanternBob.StartPlayback();
+            isPlaying = false;
+        }
 
         if (move != new Vector3(0, move.y, 0))
         {
