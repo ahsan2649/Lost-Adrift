@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 107
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 39
+  controlID: 108
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 40
+  controlID: 109
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 41
+  controlID: 110
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -426,10 +426,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 96710000
-      m_LastClickedID: 29078
-      m_ExpandedIDs: 0afbffffa669000068730000
+      scrollPos: {x: 0, y: 184}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0afbffff526b00004a6d00002a6e00009a6e0000ea6f0000427100006873000098730000f4740000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -487,8 +487,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffset: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -679,9 +679,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 11.163043, y: 3.423797, z: 3.0111911}
+    m_Target: {x: 0.18578467, y: -2.4014497, z: -5.086242}
     speed: 2
-    m_Value: {x: 11.163043, y: 3.423797, z: 3.0111911}
+    m_Value: {x: 0.18578467, y: -2.4014497, z: -5.086242}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -728,13 +728,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.23868436, y: 0.6356274, z: -0.21680397, w: -0.7019331}
+    m_Target: {x: -0.054153975, y: 0.9134132, z: -0.1303798, w: -0.38278916}
     speed: 2
-    m_Value: {x: -0.23868436, y: 0.6356274, z: -0.21680397, w: -0.7019331}
+    m_Value: {x: -0.05411273, y: 0.91457164, z: -0.1319434, w: -0.3784461}
   m_Size:
-    m_Target: 0.8573217
+    m_Target: 7.3445406
     speed: 2
-    m_Value: 0.8573217
+    m_Value: 7.3445406
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -752,7 +752,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.22931372, y: -0.40862295, z: 0.10663217, w: 0.87729156}
+  m_LastSceneViewRotation: {x: 0.018388856, y: -0.8163754, z: 0.026681673, w: 0.57727253}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -919,22 +919,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/SFX/Music
+    - Assets/Test Folder/TestAssets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/SFX/Music
+  - Assets/Test Folder/TestAssets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\langl\OneDrive\Documents\GitHub\Lost-Adrift\Lost Adrift
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 91.80002}
-    m_SelectedIDs: 14810000
-    m_LastClickedID: 33044
-    m_ExpandedIDs: 000000005a8000005c8000005e800000608000000c81000000ca9a3b
+    scrollPos: {x: 0, y: 103.80002}
+    m_SelectedIDs: 38820000
+    m_LastClickedID: 33336
+    m_ExpandedIDs: 00000000628000006480000066800000688000008e80000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -962,7 +962,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a8000005c8000005e80000060800000
+    m_ExpandedIDs: 0000000062800000648000006680000068800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

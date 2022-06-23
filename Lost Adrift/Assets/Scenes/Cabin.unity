@@ -38006,7 +38006,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6972a052b7652af44ac4a284a4c1662c,
         type: 3}
       propertyPath: m_Name
-      value: Lantern (1)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6972a052b7652af44ac4a284a4c1662c,
         type: 3}

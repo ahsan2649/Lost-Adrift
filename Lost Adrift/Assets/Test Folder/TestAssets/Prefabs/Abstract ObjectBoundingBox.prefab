@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4069746123920155138}
   - component: {fileID: 8103832562308855814}
   - component: {fileID: 8917118768445183743}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Abstract ObjectBoundingBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInLOS: 0
-  player: {fileID: 0}
   abstractObject: {fileID: 0}
 --- !u!1 &4069746125554216901
 GameObject:
@@ -177,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4069746125554216896}
   - component: {fileID: 4069746125554216898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ObjectHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
