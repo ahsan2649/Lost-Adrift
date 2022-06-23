@@ -34,13 +34,11 @@ public class TestPlayerMovement : MonoBehaviour
 
         if (move != new Vector3(0, move.y, 0) && isPlaying == false)
         {
-            Debug.Log("PPP");
             lanternBob.StopPlayback();
             isPlaying = true;
         }
         else if(move == new Vector3(0, move.y, 0))
         {
-            Debug.Log("sss");
             lanternBob.StartPlayback();
             isPlaying = false;
         }
