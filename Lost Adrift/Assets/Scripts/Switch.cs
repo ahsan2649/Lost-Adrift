@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Switch : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Switch : MonoBehaviour
     public NormalDoor dooRef;
     public GameObject buttonPart;
 
+    public UnityEvent onActivate;
+    public UnityEvent onDeActivate;
+
     private void Update()
     {
         if (!isFrozen)
@@ -27,12 +31,14 @@ public class Switch : MonoBehaviour
                     buttonPart.transform.localPosition = new Vector3(0, 0, -0.065f);
                     dooRef.CheckForNewState();
                     timer = duration;
+                    onActivate.Invoke();
                 }
                 else
                 {
                     buttonPart.transform.localPosition = new Vector3(0, 0, -0.137f);
                     timer = 0;
                     dooRef.CheckForNewState();
+                    onDeActivate.Invoke();
                 }
             }
             if (isTimed && timer > 0 && isActive)
