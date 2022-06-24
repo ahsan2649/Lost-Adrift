@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cabin.unity
     guid: 9f0950917cfc2584a92536df90dbc6a2
+  - enabled: 1
+    path: Assets/Scenes/Cabin_2.unity
+    guid: f156e64b7c9ad5148b4f18d4e7f751b6
   m_configObjects: {}
