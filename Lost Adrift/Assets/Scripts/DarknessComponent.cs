@@ -35,6 +35,7 @@ public class DarknessComponent : MonoBehaviour
         if (other.tag == "Player")
         {
             music.ChangeVolume(0.1f);
+            Debug.Log("sdsdsd");
             enterZone.Invoke();
         }
     }

@@ -63,12 +63,14 @@ public class RitualObject : MonoBehaviour
     {
         isActivated = true;
         doorRef.CheckForNewState();
+        onActivate.Invoke();
     }
 
     public void ritualOff()
     {
         isActivated = false;
         doorRef.CheckForNewState();
+        onDeactivate.Invoke();
     }
 
 }
