@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4177497884351319516}
   - component: {fileID: 417238545054213772}
   - component: {fileID: 8260730161584864245}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5992782183390711961}
   - component: {fileID: 2318105228032729204}
   - component: {fileID: 5398784341187906525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: buttonpart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 12951109962683718}
   - component: {fileID: 6581053465799453902}
   - component: {fileID: 8430818914176601350}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,6 +219,12 @@ MonoBehaviour:
   duration: 0
   dooRef: {fileID: 0}
   buttonPart: {fileID: 7064291925736388339}
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeActivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8430818914176601350
 BoxCollider:
   m_ObjectHideFlags: 0

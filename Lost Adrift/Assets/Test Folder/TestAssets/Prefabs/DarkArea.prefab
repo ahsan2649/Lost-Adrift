@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
   priority: 1
-  blendDistance: 5
+  blendDistance: 1
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 03c75d57af6f6904480faa439f6779aa, type: 2}
 --- !u!114 &4359353336873098210
@@ -76,3 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f031c0d4f3cff64c93d4a501c7a4584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterZone:
+    m_PersistentCalls:
+      m_Calls: []
+  exitZone:
+    m_PersistentCalls:
+      m_Calls: []
