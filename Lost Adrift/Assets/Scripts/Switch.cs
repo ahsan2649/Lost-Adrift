@@ -14,7 +14,6 @@ public class Switch : MonoBehaviour
     bool isFrozen;
 
     public NormalDoor dooRef;
-    public GameObject buttonPart;
 
     public UnityEvent onActivate;
     public UnityEvent onDeActivate;
@@ -28,14 +27,12 @@ public class Switch : MonoBehaviour
                 isActive = !isActive;
                 if (isActive)
                 {
-                    buttonPart.transform.localPosition = new Vector3(0, 0, -0.065f);
                     dooRef.CheckForNewState();
                     timer = duration;
                     onActivate.Invoke();
                 }
                 else
                 {
-                    buttonPart.transform.localPosition = new Vector3(0, 0, -0.137f);
                     timer = 0;
                     dooRef.CheckForNewState();
                     onDeActivate.Invoke();
@@ -47,9 +44,9 @@ public class Switch : MonoBehaviour
             }
             if (timer < 0)
             {
-                buttonPart.transform.localPosition = new Vector3(0, 0, -0.137f);
                 timer = 0;
                 isActive = false;
+                onDeActivate.Invoke();
                 dooRef.CheckForNewState();
             }
         }

@@ -39,7 +39,7 @@ public class CameraFlashComponent : MonoBehaviour
         if (canBeFrozen)
         {
             Debug.Log("Frozen " + name);
-            time = 5.3f;
+            time = 5;
             Freeze.Invoke();
         }
     }
