@@ -141,6 +141,7 @@ public class ItemScript : MonoBehaviour
         }
     }
 
+
     public void leftDarkness() //Called when darkness is disabled rather than left organically
     {
         canSwitch = true;

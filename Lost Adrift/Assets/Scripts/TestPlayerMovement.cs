@@ -90,4 +90,5 @@ public class TestPlayerMovement : MonoBehaviour
         inDarkness = false;
         currentSpeed = speed;
     }
+
 }

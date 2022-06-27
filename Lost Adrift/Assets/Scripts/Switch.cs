@@ -9,7 +9,7 @@ public class Switch : MonoBehaviour
     public bool isInScene = true;
     public bool isTimed;
     public float duration;
-    float timer;
+    public float timer;
     bool overlapping;
     bool isFrozen;
 
