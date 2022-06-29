@@ -7,6 +7,7 @@ public class HasText : MonoBehaviour
     public TextPopUp referfence;
     public string textToSay;
     bool overlapping;
+    public Outline outline;
 
     private void Update()
     {
@@ -21,6 +22,7 @@ public class HasText : MonoBehaviour
         if(other.tag == "Player")
         {
             overlapping = true;
+            if (outline) outline.toggleOutline(true);
         }
     }
 
@@ -30,6 +32,8 @@ public class HasText : MonoBehaviour
         {
             overlapping = false;
             referfence.FadeOut();
+            if (outline) outline.toggleOutline(false);
+
         }
     }
 }
