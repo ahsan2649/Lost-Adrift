@@ -8,12 +8,14 @@ public class Key : MonoBehaviour
     public UnityEvent getKey;
     ItemScript playerRef;
     public bool isKey = true;
+    bool collected;
     bool overlapping;
 
     private void Update()
     {
-        if(overlapping && Input.GetKeyDown(KeyCode.E))
+        if(overlapping && Input.GetKeyDown(KeyCode.E) && collected == false)
         {
+            collected = true;
             if (isKey)
             {
                 playerRef.keys++;
@@ -42,11 +44,14 @@ public class Key : MonoBehaviour
         {
             overlapping = false;
         }
+        if (collected)
+        {
+            gameObject.GetComponent<Collider>().enabled = false;
+        }
     }
 
     void dissapear()
     {
-        gameObject.GetComponent<Collider>().enabled = false;
         overlapping = false;
     }
 }
