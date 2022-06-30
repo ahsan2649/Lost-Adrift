@@ -13,7 +13,7 @@ public class CandleTransition : MonoBehaviour
     public GameObject otherWorld;
     public GameObject candleHead;
 
-    public UnityEvent onActive;
+    public UnityEvent onActive; 
     public UnityEvent goToOtherWorld;
     public CandleTransition[] CandleReferences;
 
