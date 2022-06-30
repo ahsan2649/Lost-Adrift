@@ -31070,7 +31070,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179984302}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &730568110
 BoxCollider:
@@ -36684,10 +36684,10 @@ Transform:
   - {fileID: 1199381792}
   - {fileID: 1452600247}
   - {fileID: 1870577755}
-  - {fileID: 2006760702}
   - {fileID: 1310456960}
   - {fileID: 1543259639}
   - {fileID: 1538816077}
+  - {fileID: 2006760702}
   - {fileID: 654563239}
   - {fileID: 787964071}
   m_Father: {fileID: 1112337187}
@@ -49587,12 +49587,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 730568109}
+  - {fileID: 2076182543}
   - {fileID: 1255167405}
   - {fileID: 1652277354}
   - {fileID: 757809087}
   - {fileID: 1460157727}
   - {fileID: 1737457041}
-  - {fileID: 730568109}
   - {fileID: 1045376217}
   - {fileID: 1265088507}
   - {fileID: 840673055}
@@ -49606,7 +49607,6 @@ Transform:
   - {fileID: 865880930}
   - {fileID: 2018065453}
   - {fileID: 1716741529}
-  - {fileID: 2076182543}
   m_Father: {fileID: 1669401230}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62606,6 +62606,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ritual Object 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5411434826724468759, guid: b017e9134d555e742847be49019b14ac,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411434826724468759, guid: b017e9134d555e742847be49019b14ac,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411434826724468759, guid: b017e9134d555e742847be49019b14ac,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5411434826724468760, guid: b017e9134d555e742847be49019b14ac,
         type: 3}
       propertyPath: m_RootOrder
@@ -62614,7 +62629,7 @@ PrefabInstance:
     - target: {fileID: 5411434826724468760, guid: b017e9134d555e742847be49019b14ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.704585
+      value: 2.848
       objectReference: {fileID: 0}
     - target: {fileID: 5411434826724468760, guid: b017e9134d555e742847be49019b14ac,
         type: 3}
@@ -87157,7 +87172,7 @@ Transform:
   - {fileID: 552058911}
   - {fileID: 1048165472}
   m_Father: {fileID: 1179984302}
-  m_RootOrder: 19
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2076407115 stripped
 Transform:
