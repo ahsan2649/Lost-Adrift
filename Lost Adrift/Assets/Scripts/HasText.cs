@@ -34,6 +34,7 @@ public class HasText : MonoBehaviour
         {
             overlapping = false;
             if(textShown) referfence.FadeOut();
+            textShown = false;
             if (outline) outline.toggleOutline(false);
         }
     }
@@ -41,5 +42,6 @@ public class HasText : MonoBehaviour
     public void HideText()
     {
         if (textShown) referfence.FadeOut();
+        textShown = false;
     }
 }
