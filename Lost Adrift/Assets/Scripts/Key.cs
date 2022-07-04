@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Key : MonoBehaviour
 {
     public UnityEvent getKey;
+    public Animator iconAnim;
     ItemScript playerRef;
     public bool isKey = true;
     bool collected;
@@ -18,11 +19,13 @@ public class Key : MonoBehaviour
             collected = true;
             if (isKey)
             {
+                iconAnim.SetTrigger("Get");
                 playerRef.keys++;
             }
             else
             {
                 playerRef.ritualObjects++;
+                playerRef.updateRitualItems();
             }
             getKey.Invoke();
             dissapear();

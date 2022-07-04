@@ -25,6 +25,7 @@ public class RitualObject : MonoBehaviour
             if (!isActivated && reference.ritualObjects > 0)
             {
                 reference.ritualObjects--;
+                reference.updateRitualItems();
                 isActivated = true;
                 onActivate.Invoke();
                 ritualOn();
@@ -37,6 +38,7 @@ public class RitualObject : MonoBehaviour
             else if(isActivated)
             {
                 reference.ritualObjects++;
+                reference.updateRitualItems();
                 onDeactivate.Invoke();
                 ritualOff();
             }

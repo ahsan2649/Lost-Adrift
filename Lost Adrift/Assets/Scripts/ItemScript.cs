@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class ItemScript : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class ItemScript : MonoBehaviour
     public int keys;
     public int ritualObjects;
     float timer;
+
+    public TextMeshProUGUI ritualNum;
+    public Animator candleIcon;
 
     void Start()
     {
@@ -141,9 +145,22 @@ public class ItemScript : MonoBehaviour
         }
     }
 
-
     public void leftDarkness() //Called when darkness is disabled rather than left organically
     {
         canSwitch = true;
+    }
+
+    public void updateRitualItems()
+    {
+        ritualNum.text = ritualObjects + "";
+        if (candleIcon.GetCurrentAnimatorStateInfo(0).IsName("CandleIconGet"))
+        {
+            candleIcon.Play("CandleIconIdle");
+            candleIcon.SetTrigger("Get");
+        }
+        else
+        {
+            candleIcon.SetTrigger("Get");
+        }
     }
 }
