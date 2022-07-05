@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Switch : MonoBehaviour
 {
+    AudioSource aSS;
     public bool isActive;
     public bool isInScene = true;
     public bool isTimed;
@@ -18,6 +19,11 @@ public class Switch : MonoBehaviour
     public UnityEvent onActivate;
     public UnityEvent onDeActivate;
 
+    private void Start()
+    {
+        aSS = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if (!isFrozen)
@@ -25,6 +31,7 @@ public class Switch : MonoBehaviour
             if (overlapping && Input.GetKeyDown(KeyCode.E))
             {
                 isActive = !isActive;
+                aSS.Play();
                 if (isActive)
                 {
                     dooRef.CheckForNewState();
