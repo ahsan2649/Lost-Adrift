@@ -9,6 +9,12 @@ public class HasText : MonoBehaviour
     bool overlapping;
     bool textShown;
     public Outline outline;
+    AudioSource aSS; //Audio source speaker, geez grow up >:(
+
+    private void Start()
+    {
+        aSS = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -24,7 +30,7 @@ public class HasText : MonoBehaviour
         if(other.tag == "Player")
         {
             overlapping = true;
-            if (outline) outline.toggleOutline(true);
+            if (outline) outline.toggleOutline(true); aSS.pitch = 1; aSS.Play();
         }
     }
 
@@ -35,7 +41,7 @@ public class HasText : MonoBehaviour
             overlapping = false;
             if(textShown) referfence.FadeOut();
             textShown = false;
-            if (outline) outline.toggleOutline(false);
+            if (outline) outline.toggleOutline(false); aSS.pitch = 0.5f; aSS.Play(); 
         }
     }
 
