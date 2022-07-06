@@ -16,6 +16,7 @@ public class ItemScript : MonoBehaviour
     public List<CameraFlashComponent> flashableObjects;
 
     public bool isNorth;
+    public CamFlash camScript;
     bool canSwitch = true;
     public UnityEvent camFlash;
     public int keys;
@@ -81,6 +82,10 @@ public class ItemScript : MonoBehaviour
             {
                 LampStatus(false);
             }
+            if (equippedItem == 1)
+            {
+                camScript.ResetFlash();
+            }
         }
 
         //CompassCode
@@ -134,6 +139,9 @@ public class ItemScript : MonoBehaviour
         if(other.tag == "Darkness")
         {
             canSwitch = false;
+            items[equippedItem].SetActive(false);
+            items[0].SetActive(true);
+            LampStatus(true);
         }
     }
 

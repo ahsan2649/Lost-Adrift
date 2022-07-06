@@ -66,6 +66,13 @@ public class Switch : MonoBehaviour
             overlapping = true;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            overlapping = true;
+        }
+    }
 
     private void OnTriggerExit(Collider other)
     {

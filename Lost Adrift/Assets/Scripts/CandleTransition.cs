@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class CandleTransition : MonoBehaviour
 {
     bool overlapping;
+    float timer;
     public bool inOtherworld;
     MusicScript musicRef;
 
@@ -34,8 +35,10 @@ public class CandleTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (overlapping && Input.GetKeyDown(KeyCode.E))
+        timer -= Time.deltaTime;
+        if (overlapping && Input.GetKeyDown(KeyCode.E) && timer <= 0)
         {
+            timer = 2;
             onActive.Invoke();
             if (!inOtherworld)
             {

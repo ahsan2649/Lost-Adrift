@@ -26,4 +26,8 @@ public class CamFlash : MonoBehaviour
         camFlash.intensity = 100;
         camSound.Play();
     }
+    public void ResetFlash()
+    {
+        camFlash.intensity = 0;
+    }
 }
