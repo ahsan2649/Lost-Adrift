@@ -21,6 +21,7 @@ public class HasText : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && overlapping && textShown == false)
         {
             referfence.FadeIn(textToSay);
+            if (outline) outline.toggleOutline(false);
             textShown = true;
         }
     }
