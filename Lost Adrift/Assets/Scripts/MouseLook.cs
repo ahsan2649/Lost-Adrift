@@ -4,26 +4,54 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    public TestPlayerMovement playerMovement;
+    public ItemScript playerItems;
+
     public float mouseSense = 100;
+    public GameObject pauseMenu;
 
     public Transform playerBody;
     float xRot = 0;
+    bool isPaused;
 
     void Start()
     {
+        GameObject.FindGameObjectWithTag("Savedata").GetComponent<SAVEDATASCRIPT>().localMouseScript = this;
+        mouseSense = GameObject.FindGameObjectWithTag("Savedata").GetComponent<SAVEDATASCRIPT>().sensitivity;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSense * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSense * Time.deltaTime;
+        if(isPaused == false)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSense * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSense * Time.deltaTime;
 
-        xRot -= mouseY;
-        xRot = Mathf.Clamp(xRot, -90, 90);
+            xRot -= mouseY;
+            xRot = Mathf.Clamp(xRot, -90, 90);
 
-        transform.localRotation = Quaternion.Euler(xRot, 0, 0);
-        playerBody.Rotate(Vector3.up * mouseX);
+            transform.localRotation = Quaternion.Euler(xRot, 0, 0);
+            playerBody.Rotate(Vector3.up * mouseX);
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                playerMovement.Pause();
+                playerItems.Pause();
+                pauseMenu.SetActive(true);
+                Cursor.lockState = CursorLockMode.Confined;
+                isPaused = true;
+            }
+        }
+    }
+
+    public void unPause()
+    {
+        playerItems.UnPause();
+        playerMovement.UnPause();
+        pauseMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        isPaused = false;
     }
 }
