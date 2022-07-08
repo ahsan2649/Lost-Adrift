@@ -11,6 +11,7 @@ public class MouseLook : MonoBehaviour
     public GameObject pauseMenu;
 
     public Transform playerBody;
+    MusicScript music;
     float xRot = 0;
     bool isPaused;
 
@@ -19,6 +20,7 @@ public class MouseLook : MonoBehaviour
         GameObject.FindGameObjectWithTag("Savedata").GetComponent<SAVEDATASCRIPT>().localMouseScript = this;
         mouseSense = GameObject.FindGameObjectWithTag("Savedata").GetComponent<SAVEDATASCRIPT>().sensitivity;
         Cursor.lockState = CursorLockMode.Locked;
+        music = GameObject.FindGameObjectWithTag("Music").GetComponent<MusicScript>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class MouseLook : MonoBehaviour
             {
                 playerMovement.Pause();
                 playerItems.Pause();
+                music.PauseMusic();
                 pauseMenu.SetActive(true);
                 Cursor.lockState = CursorLockMode.Confined;
                 isPaused = true;
@@ -50,6 +53,7 @@ public class MouseLook : MonoBehaviour
     {
         playerItems.UnPause();
         playerMovement.UnPause();
+        music.PlayMusic();
         pauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         isPaused = false;
