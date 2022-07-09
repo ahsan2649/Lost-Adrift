@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TestPlayerMovement : MonoBehaviour
 {
+    bool paused;
     CharacterController controller;
     public AudioClip[] StepSounds;
     AudioSource Source;
@@ -27,33 +28,35 @@ public class TestPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        if (move != new Vector3(0, move.y, 0) && isPlaying == false)
+        if (paused == false)
         {
-            lanternBob.StopPlayback();
-            isPlaying = true;
-        }
-        else if(move == new Vector3(0, move.y, 0))
-        {
-            lanternBob.StartPlayback();
-            isPlaying = false;
-        }
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
 
-        if (move != new Vector3(0, move.y, 0))
-        {
-            timer -= Time.deltaTime;
+            Vector3 move = transform.right * x + transform.forward * z;
 
-            if(timer < 0)
+            if (move != new Vector3(0, move.y, 0) && isPlaying == false)
             {
-                Step();
+                lanternBob.StopPlayback();
+                isPlaying = true;
             }
-        }
+            else if (move == new Vector3(0, move.y, 0))
+            {
+                lanternBob.StartPlayback();
+                isPlaying = false;
+            }
 
-        controller.Move(move * currentSpeed * Time.deltaTime);
+            if (move != new Vector3(0, move.y, 0))
+            {
+                timer -= Time.deltaTime;
+
+                if (timer < 0)
+                {
+                    Step();
+                }
+            }
+            controller.Move(move * currentSpeed * Time.deltaTime);
+        }
     }
 
     void Step()
@@ -91,4 +94,15 @@ public class TestPlayerMovement : MonoBehaviour
         currentSpeed = speed;
     }
 
+    public void Pause()
+    {
+        lanternBob.StartPlayback();
+        isPlaying = false;
+        paused = true;
+    }
+
+    public void UnPause()
+    {
+        paused = false;
+    }
 }

@@ -22,15 +22,6 @@ public class AbstractSpaceObject : MonoBehaviour
         scriptRef = GameObject.FindGameObjectWithTag("Player").GetComponent<ItemScript>();
         lineOfSight = GetComponent<DLTP>();
         lineOfSight.abstractObject = this; //Get dltp script reference
-
-        if (isSeen)
-        {
-            BecomeVisible();
-        }
-        else
-        {
-            BecomeInvisible();
-        }
     }
 
 

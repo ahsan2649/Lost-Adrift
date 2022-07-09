@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class ItemScript : MonoBehaviour
 {
+    bool paused;
     public int equippedItem;
     public GameObject[] items;
 
@@ -15,11 +17,15 @@ public class ItemScript : MonoBehaviour
     public List<CameraFlashComponent> flashableObjects;
 
     public bool isNorth;
+    public CamFlash camScript;
     bool canSwitch = true;
     public UnityEvent camFlash;
     public int keys;
     public int ritualObjects;
     float timer;
+
+    public TextMeshProUGUI ritualNum;
+    public Animator candleIcon;
 
     void Start()
     {
@@ -57,56 +63,63 @@ public class ItemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) && canSwitch)
+        if (paused == false)
         {
-            items[equippedItem].SetActive(false);
-            equippedItem++;
-            if (equippedItem == items.Length)
-            {
-                equippedItem = 0;
-            }
-            items[equippedItem].SetActive(true);
+            timer -= Time.deltaTime;
 
-            if(items[equippedItem].name == "Lamp")
+            if (Input.GetKeyDown(KeyCode.Mouse0) && canSwitch)
             {
-                LampStatus(true);
-            }
-            else
-            {
-                LampStatus(false);
-            }
-        }
+                items[equippedItem].SetActive(false);
+                equippedItem++;
+                if (equippedItem == items.Length)
+                {
+                    equippedItem = 0;
+                }
+                items[equippedItem].SetActive(true);
 
-        //CompassCode
-        if (Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Compass")
-        {
-            isNorth = !isNorth;
-            if (isNorth)
-            {
-                compassDirection[0].SetActive(true);
-                compassDirection[1].SetActive(false);
+                if (items[equippedItem].name == "Lamp")
+                {
+                    LampStatus(true);
+                }
+                else
+                {
+                    LampStatus(false);
+                }
+                if (equippedItem == 1)
+                {
+                    camScript.ResetFlash();
+                }
             }
-            else if (!isNorth)
-            {
-                compassDirection[1].SetActive(true);
-                compassDirection[0].SetActive(false);
-            }
-            foreach (Compass script in chargedObjects)
-            {
-                script.ChargeUpdated(isNorth);
-            }
-        }
 
-        //CameraCode
-        if(Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Camera" && timer < 0)
-        {
-            timer = 5;
-            camFlash.Invoke();
-            foreach(CameraFlashComponent script in flashableObjects)
+            //CompassCode
+            if (Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Compass")
             {
-                script.TestIfFlashed();
+                isNorth = !isNorth;
+                if (isNorth)
+                {
+                    compassDirection[0].SetActive(true);
+                    compassDirection[1].SetActive(false);
+                }
+                else if (!isNorth)
+                {
+                    compassDirection[1].SetActive(true);
+                    compassDirection[0].SetActive(false);
+                }
+                foreach (Compass script in chargedObjects)
+                {
+                    script.ChargeUpdated(isNorth);
+                }
+            }
+
+            //CameraCode
+            if (Input.GetKeyDown(KeyCode.Mouse1) && items[equippedItem].name == "Camera" && timer < 0)
+            {
+                timer = 5;
+                camFlash.Invoke();
+                foreach (CameraFlashComponent script in flashableObjects)
+                {
+                    script.TestIfFlashed();
+                }
             }
         }
     }
@@ -130,6 +143,9 @@ public class ItemScript : MonoBehaviour
         if(other.tag == "Darkness")
         {
             canSwitch = false;
+            items[equippedItem].SetActive(false);
+            items[0].SetActive(true);
+            LampStatus(true);
         }
     }
 
@@ -141,9 +157,32 @@ public class ItemScript : MonoBehaviour
         }
     }
 
-
     public void leftDarkness() //Called when darkness is disabled rather than left organically
     {
         canSwitch = true;
+    }
+
+    public void updateRitualItems()
+    {
+        ritualNum.text = ritualObjects + "";
+        if (candleIcon.GetCurrentAnimatorStateInfo(0).IsName("CandleIconGet"))
+        {
+            candleIcon.Play("CandleIconIdle");
+            candleIcon.SetTrigger("Get");
+        }
+        else
+        {
+            candleIcon.SetTrigger("Get");
+        }
+    }
+
+    public void Pause()
+    {
+        paused = true;
+    }
+
+    public void UnPause()
+    {
+        paused = false;
     }
 }
