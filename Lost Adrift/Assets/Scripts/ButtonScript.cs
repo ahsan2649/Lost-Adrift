@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
-    
+
     public void startGame()
     {
         SceneManager.LoadScene("Cutscene_Intro", LoadSceneMode.Single);

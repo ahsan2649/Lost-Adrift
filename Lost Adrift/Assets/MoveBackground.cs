@@ -71,9 +71,12 @@ public class MoveBackground : MonoBehaviour
             {
                 imagesToShow[5].GetComponent<Animator>().SetTrigger("FadeOut");
                 imagesToShow[0].GetComponent<Animator>().SetTrigger("FadeIn");
+            }
+            if(i == 14)
+            {
                 dialougeBox.SetActive(true);
             }
-            if(i == 18)
+            if (i == 18)
             {
                 SceneManager.LoadScene("Cabin", LoadSceneMode.Single);
             }

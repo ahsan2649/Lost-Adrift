@@ -39,11 +39,12 @@ public class MouseLook : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
                 playerMovement.Pause();
                 playerItems.Pause();
                 music.PauseMusic();
                 pauseMenu.SetActive(true);
-                Cursor.lockState = CursorLockMode.Confined;
                 isPaused = true;
             }
         }
