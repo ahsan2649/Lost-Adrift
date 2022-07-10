@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HasText : MonoBehaviour
 {
+    [Header("Click 'Reference' and fill it in, there should only be 1 option.")]
     public TextPopUp referfence;
     public string textToSay;
     bool overlapping;
