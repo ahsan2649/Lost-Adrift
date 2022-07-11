@@ -18,8 +18,18 @@ public class TestPlayerMovement : MonoBehaviour
     public Animator lanternBob;
     bool isPlaying;
 
+    public GameObject GoPro;
+    float stableCam;
+    public float bobAmount;
+    public float bobFreq;
+    float timePassed;
+
+
     void Start()
     {
+        stableCam = GoPro ? GoPro.transform.position.y : 0;
+        timePassed = 0;
+
         controller = GetComponent<CharacterController>();
         Source = GetComponent<AudioSource>();
         currentSpeed = speed;
@@ -28,6 +38,7 @@ public class TestPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timePassed += Time.deltaTime;
         if (paused == false)
         {
             float x = Input.GetAxis("Horizontal");
@@ -42,12 +53,24 @@ public class TestPlayerMovement : MonoBehaviour
             }
             else if (move == new Vector3(0, move.y, 0))
             {
+                GoPro.transform.position = Vector3.Lerp(GoPro.transform.position, new Vector3(
+                    GoPro.transform.position.x,
+                    GoPro.transform.position.y,
+                    GoPro.transform.position.z
+                    ), 2f * Time.deltaTime);
+
                 lanternBob.StartPlayback();
                 isPlaying = false;
             }
 
             if (move != new Vector3(0, move.y, 0))
             {
+                GoPro.transform.position = Vector3.Lerp(GoPro.transform.position, new Vector3(
+                    GoPro.transform.position.x,
+                    stableCam + Mathf.Sin(Time.realtimeSinceStartup * bobFreq) * bobAmount,
+                    GoPro.transform.position.z
+                    ), 2f * Time.deltaTime);
+
                 timer -= Time.deltaTime;
 
                 if (timer < 0)
