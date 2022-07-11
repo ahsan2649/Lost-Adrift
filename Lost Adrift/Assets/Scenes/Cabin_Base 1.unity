@@ -16454,7 +16454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77768a3661657b74294040f3b47fb73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
+  playerItems: {fileID: 0}
   mouseSense: 100
+  pauseMenu: {fileID: 0}
   playerBody: {fileID: 1254484966}
 --- !u!114 &769814246
 MonoBehaviour:
@@ -27836,6 +27839,9 @@ MonoBehaviour:
   speed: 3
   walkSpeed: 2
   lanternBob: {fileID: 1273151526}
+  GoPro: {fileID: 769814243}
+  bobAmount: 0.25
+  bobFreq: 10
 --- !u!114 &1254484968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27859,6 +27865,7 @@ MonoBehaviour:
   darkAreas: []
   flashableObjects: []
   isNorth: 0
+  camScript: {fileID: 0}
   camFlash:
     m_PersistentCalls:
       m_Calls:
@@ -27888,6 +27895,8 @@ MonoBehaviour:
         m_CallState: 2
   keys: 0
   ritualObjects: 0
+  ritualNum: {fileID: 0}
+  candleIcon: {fileID: 0}
 --- !u!82 &1254484969
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28367,6 +28376,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  iconAnim: {fileID: 0}
   isKey: 1
 --- !u!82 &1265088509
 AudioSource:
