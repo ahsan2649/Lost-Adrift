@@ -28142,6 +28142,9 @@ MonoBehaviour:
   speed: 3
   walkSpeed: 2
   lanternBob: {fileID: 1273151526}
+  GoPro: {fileID: 769814243}
+  bobAmount: 0.25
+  bobFreq: 10
 --- !u!114 &1254484968
 MonoBehaviour:
   m_ObjectHideFlags: 0
