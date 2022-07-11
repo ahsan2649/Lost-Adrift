@@ -40,6 +40,7 @@ public class CandleTransition : MonoBehaviour
         {
             timer = 2;
             onActive.Invoke();
+            overlapping = false;
             if (!inOtherworld)
             {
                 goToOtherWorld.Invoke();
