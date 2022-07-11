@@ -122,4 +122,12 @@ public class NormalDoor : MonoBehaviour
     {
         locked = false;
     }
+
+    public void SequenceBroken()
+    {
+        foreach (Switch script in switches)
+        {
+            script.SequenceBroken();
+        }
+    }
 }

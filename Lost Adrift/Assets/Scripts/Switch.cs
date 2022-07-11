@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Switch : MonoBehaviour
 {
+    public bool isInSequence;
+    bool localSequenceCheck;
     AudioSource aSS;
     public bool isActive;
     public bool isInScene = true;
@@ -22,6 +24,7 @@ public class Switch : MonoBehaviour
     private void Start()
     {
         aSS = GetComponent<AudioSource>();
+        localSequenceCheck = isInSequence;
     }
 
     private void Update()
@@ -55,6 +58,7 @@ public class Switch : MonoBehaviour
                 isActive = false;
                 onDeActivate.Invoke();
                 dooRef.CheckForNewState();
+                dooRef.SequenceBroken();
             }
         }
     }
@@ -103,5 +107,27 @@ public class Switch : MonoBehaviour
     public void UnFreeze()
     {
         isFrozen = false;
+    }
+
+    public void SequenceFollowed()
+    {
+        localSequenceCheck = false;
+    }
+
+    public void SequenceBroken()
+    {
+        localSequenceCheck = isInSequence;
+        onDeActivate.Invoke();
+    }
+
+    public void Deactivate()
+    {
+        if (localSequenceCheck)
+        {
+            onDeActivate.Invoke();
+            isActive = false;
+            timer = 0;
+            dooRef.CheckForNewState();
+        }
     }
 }
