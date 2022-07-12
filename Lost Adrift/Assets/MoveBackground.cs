@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class MoveBackground : MonoBehaviour
 {
+    public bool isEnd;
     Vector3 mousePos;
     Vector3 originalPos;
     CursorMode cursorMode = CursorMode.Auto;
@@ -56,6 +57,14 @@ public class MoveBackground : MonoBehaviour
                 imagesToShow[2].GetComponent<Animator>().SetTrigger("FadeOut");
                 imagesToShow[3].GetComponent<Animator>().SetTrigger("FadeIn");
             }
+            if( i == 10)
+            {
+                if (isEnd)
+                {
+                    Application.Quit();
+                    Debug.Log("sdsd");
+                }
+            }
             if (i == 11)
             {
                 imagesToShow[3].GetComponent<Animator>().SetTrigger("FadeOut");
@@ -78,6 +87,7 @@ public class MoveBackground : MonoBehaviour
             }
             if (i == 18)
             {
+
                 SceneManager.LoadScene("Cabin", LoadSceneMode.Single);
             }
         }

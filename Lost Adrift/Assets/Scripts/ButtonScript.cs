@@ -8,7 +8,7 @@ public class ButtonScript : MonoBehaviour
 
     public void startGame()
     {
-        SceneManager.LoadScene("Cutscene_Intro", LoadSceneMode.Single);
+        SceneManager.LoadScene("Cutscene_End", LoadSceneMode.Single);
     }
 
     public void exitGame()
