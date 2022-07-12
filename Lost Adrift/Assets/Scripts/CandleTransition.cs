@@ -39,7 +39,7 @@ public class CandleTransition : MonoBehaviour
         if (overlapping && Input.GetKeyDown(KeyCode.E) && timer <= 0)
         {
             timer = 2;
-            onActive.Invoke();
+            onActive.Invoke();  
             overlapping = false;
             if (!inOtherworld)
             {

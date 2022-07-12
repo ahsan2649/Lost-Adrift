@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class DeathVignette : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class DeathVignette : MonoBehaviour
         }
         if (timer > maxTime)
         {
-            Debug.Log("U ded bro");
+            SceneManager.LoadScene("Cabin_3", LoadSceneMode.Single);
         }
     }
 
