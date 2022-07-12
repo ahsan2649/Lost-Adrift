@@ -12,7 +12,7 @@ public class DeathVignette : MonoBehaviour
     public float maxTime;
 
     bool isTiming;
-    float timer;
+    public float timer;
 
     private void Start()
     {

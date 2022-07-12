@@ -128,6 +128,7 @@ public class NormalDoor : MonoBehaviour
         foreach (Switch script in switches)
         {
             script.SequenceBroken();
+            script.onDeActivate.Invoke();
         }
     }
 }

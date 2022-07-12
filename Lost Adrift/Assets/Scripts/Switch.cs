@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Switch : MonoBehaviour
 {
     public bool isInSequence;
-    bool localSequenceCheck;
+    public bool localSequenceCheck;
     AudioSource aSS;
     public bool isActive;
     public bool isInScene = true;
@@ -37,9 +37,16 @@ public class Switch : MonoBehaviour
                 aSS.Play();
                 if (isActive)
                 {
-                    dooRef.CheckForNewState();
-                    timer = duration;
-                    onActivate.Invoke();
+                    if (localSequenceCheck)
+                    {
+                        dooRef.SequenceBroken();
+                    }
+                    else
+                    {
+                        dooRef.CheckForNewState();
+                        timer = duration;
+                        onActivate.Invoke();
+                    }
                 }
                 else
                 {
@@ -58,7 +65,6 @@ public class Switch : MonoBehaviour
                 isActive = false;
                 onDeActivate.Invoke();
                 dooRef.CheckForNewState();
-                dooRef.SequenceBroken();
             }
         }
     }
@@ -117,17 +123,13 @@ public class Switch : MonoBehaviour
     public void SequenceBroken()
     {
         localSequenceCheck = isInSequence;
-        onDeActivate.Invoke();
     }
 
     public void Deactivate()
     {
-        if (localSequenceCheck)
-        {
-            onDeActivate.Invoke();
-            isActive = false;
-            timer = 0;
-            dooRef.CheckForNewState();
-        }
+        onDeActivate.Invoke();
+        isActive = false;
+        timer = 0;
+        dooRef.CheckForNewState();
     }
 }

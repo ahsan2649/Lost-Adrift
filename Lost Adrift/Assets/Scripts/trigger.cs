@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class trigger : MonoBehaviour
 {
@@ -22,5 +23,10 @@ public class trigger : MonoBehaviour
         {
             onExit.Invoke();
         }
+    }
+
+    public void LoadLevel(string lvlName)
+    {
+        SceneManager.LoadScene(lvlName, LoadSceneMode.Single);
     }
 }

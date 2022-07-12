@@ -227,7 +227,7 @@ RectTransform:
   m_GameObject: {fileID: 304049252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23720035, y: 0.23720035, z: 0.23720035}
+  m_LocalScale: {x: 0.26019937, y: 0.26019937, z: 0.26019937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391212947}
@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000004, y: 0}
+  m_AnchoredPosition: {x: 21, y: 0}
   m_SizeDelta: {x: 3999.9998, y: 1999.9999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &304049254
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 712c6e59823d5564cac9e9de9576f48b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09b7a5502badd5e47870fed000c57f1c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -427,20 +427,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85ab267eb0b6354094ade4f09d54164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnd: 1
   centerOfScreen: {fileID: 1336522413}
   cursorTexture: {fileID: 2800000, guid: d2765521fbd07b24c9faad27de02dddc, type: 3}
   text: {fileID: 1164823968}
   textToSay:
   - There was a time when I was the happiest man on earth.
-  - But everything changed when my daughter got swept away.
-  - It changed my entire life, and I fell into a deep hole of sadness.
-  - But then I came to the cabin. To clear my head, to relive the memories.
-  - And it seemed to work.
-  - I know my daughter is out there somewhere. I just need to go find her.
-  - For the first time in years, I'm finally hopeful again.
-  - So that's why I came here.
-  - I can find her.
+  - That was about a year ago, when Alice was still alive.
+  - She was my daughter, my world.
+  - When she was younger, we used to go exploring in the woods. We'd look at all
+    the different plants and animals.
+  - Seeing her smile and laugh when we went exploring was worth more than anything.
+    We loved it.
+  - But after a while, she stopped coming along.
+  - She took an intrest in other things as she grew older, as kids do. But she also
+    seemed to grow more distant from me.
+  - Things that used to make her smile didn't spark anything in her anymore. I tried
+    and I tried, but I just couldn't connect with her like I used too.
+  - Soon enough, she was getting ready to move out.
+  - 'So as a last attempt, I took her back to where we used to camp and explore when
+    she was little. '
+  - I took her on a new path that we never went on before, and...
+  - 
+  - 
+  - 
+  - We had police and search parties search for her, but she was never found after
+    getting swept away.
+  - 'Since then, I haven''t been able to sleep, eat, anything. '
+  - Maybe I can clear my head and confront my trauma by visitng the cabin we stayed
+    at before it happened.
+  - So that's why I'm here.
   - I can do this...
   - 
   imagesToShow:
@@ -597,7 +612,7 @@ RectTransform:
   m_GameObject: {fileID: 532594854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23720035, y: 0.23720035, z: 0.23720035}
+  m_LocalScale: {x: 0.26019937, y: 0.26019937, z: 0.26019937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391212947}
@@ -605,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000004, y: 0}
+  m_AnchoredPosition: {x: 41, y: 17}
   m_SizeDelta: {x: 3999.9998, y: 1999.9999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &532594856
@@ -648,7 +663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 712c6e59823d5564cac9e9de9576f48b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8962bec1adb661644819598a200125c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -877,7 +892,7 @@ RectTransform:
   m_GameObject: {fileID: 1127630477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23720035, y: 0.23720035, z: 0.23720035}
+  m_LocalScale: {x: 0.26019937, y: 0.26019937, z: 0.26019937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391212947}
@@ -885,7 +900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 0}
+  m_AnchoredPosition: {x: -75, y: 0}
   m_SizeDelta: {x: 3999.9998, y: 1999.9999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127630479
@@ -908,7 +923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 712c6e59823d5564cac9e9de9576f48b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 873f1e50ba6f07a47ba234c6cd2a66b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1186,7 +1201,7 @@ RectTransform:
   m_GameObject: {fileID: 1317846295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23720035, y: 0.23720035, z: 0.23720035}
+  m_LocalScale: {x: 0.26019937, y: 0.26019937, z: 0.26019937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391212947}
@@ -1194,7 +1209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000004, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 3999.9998, y: 1999.9999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317846297
@@ -1210,14 +1225,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 712c6e59823d5564cac9e9de9576f48b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da81f1ce9975b544b974e1e4a13d6ddc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1422,7 +1437,7 @@ RectTransform:
   m_GameObject: {fileID: 1361027949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23720035, y: 0.23720035, z: 0.23720035}
+  m_LocalScale: {x: 0.26019937, y: 0.26019937, z: 0.26019937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391212947}
@@ -1430,7 +1445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000004, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 3999.9998, y: 1999.9999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361027951
@@ -1453,7 +1468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 712c6e59823d5564cac9e9de9576f48b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da81f1ce9975b544b974e1e4a13d6ddc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1566,7 +1581,7 @@ RectTransform:
   m_GameObject: {fileID: 2094772928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23720035, y: 0.23720035, z: 0.23720035}
+  m_LocalScale: {x: 0.26019937, y: 0.26019937, z: 0.26019937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 391212947}
@@ -1574,7 +1589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000004, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 3999.9998, y: 1999.9999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2094772930
@@ -1597,7 +1612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 712c6e59823d5564cac9e9de9576f48b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b48118f3d1ffd7429f13f1307b56387, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
